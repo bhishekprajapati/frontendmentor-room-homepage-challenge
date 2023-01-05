@@ -14,21 +14,55 @@
 
   <section class="lg:flex">
     <!-- slider -->
-    <div class="min-w-[58.33%]">
-      <div class="slider" id="slider">
-        <picture class="slide">
-          <source media="(min-width: 64em)" srcset="./images/desktop-image-hero-1.jpg">
-          <img class="slide__img" src="./images/mobile-image-hero-1.jpg" alt="">
-        </picture>
-        <picture class="slide">
-          <source media="(min-width: 64em)" srcset="./images/desktop-image-hero-2.jpg">
-          <img class="slide__img" src="./images/mobile-image-hero-2.jpg" alt="">
-        </picture>
-        <picture class="slide">
-          <source media="(min-width: 64em)" srcset="./images/desktop-image-hero-3.jpg">
-          <img class="slide__img" src="./images/mobile-image-hero-3.jpg" alt="">
-        </picture>
+    <div class="relative min-w-[58.33%]">
+      <div class="relative">
+        <div class="slider" id="slider">
+          <picture class="slide">
+            <source media="(min-width: 64em)" srcset="./images/desktop-image-hero-1.jpg">
+            <img class="slide__img" src="./images/mobile-image-hero-1.jpg" alt="">
+          </picture>
+          <picture class="slide">
+            <source media="(min-width: 64em)" srcset="./images/desktop-image-hero-2.jpg">
+            <img class="slide__img" src="./images/mobile-image-hero-2.jpg" alt="">
+          </picture>
+          <picture class="slide">
+            <source media="(min-width: 64em)" srcset="./images/desktop-image-hero-3.jpg">
+            <img class="slide__img" src="./images/mobile-image-hero-3.jpg" alt="">
+          </picture>
+        </div>
       </div>
+
+      <nav class="absolute top-0 left-0 right-0 text-white">
+        <div class="py-12 px-6 lg:p-16 relative">
+          <input class="fixed h-[-100vw] opacity-0 
+                        [&~#header-content_#menu-visible-toggler_#menu-close]:hidden [&:checked~#header-content_#menu-visible-toggler_#menu-close]:block 
+                        [&:checked~#header-content_#menu-visible-toggler_#menu-hamburger]:hidden 
+                        [&~#header-content_#site-logo]:block [&:checked~#header-content_#site-logo]:hidden 
+                        [&~#header-content_#menu-links]:hidden [&:checked~#header-content_#menu-links]:flex
+                        [&~#menu-bg]:hidden [&:checked~#menu-bg]:block
+                      " type="checkbox" id="menu-hidden-toggler">
+          <div class="relative z-50" id="header-content">
+            <div class="flex items-center justify-center lg:justify-start lg:gap-x-14">
+              <div class="mr-auto lg:hidden">
+                <label for="menu-hidden-toggler" id="menu-visible-toggler">
+                  <img class="pointer-events-none" src="./images/icon-hamburger.svg" alt="" id="menu-hamburger">
+                  <img class="pointer-events-none" src="./images/icon-close.svg" alt="" id="menu-close">
+                </label>
+              </div>
+              <div class="mr-auto lg:mr-0" id="site-logo">
+                <img src="./images/logo.svg" alt="">
+              </div>
+              <ul class="flex gap-x-8 font-bold text-black lg:text-white lg:!flex" id="menu-links">
+                <li><a href="#" class="text-[0.875rem]">Home</a></li>
+                <li><a href="#" class="text-[0.875rem]">Shop</a></li>
+                <li><a href="#" class="text-[0.875rem]">About</a></li>
+                <li><a href="#" class="text-[0.875rem]">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="absolute top-0 right-0 left-0 bottom-0 z-0 bg-white lg:!hidden" id="menu-bg"></div>
+        </div>
+      </nav>
     </div>
     <div class="min-w-[41.67%] lg:relative">
       <div class="relative lg:static px-8 lg:px-[6.375rem] py-14 lg:py-[7.4rem]">
