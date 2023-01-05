@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .body-text {
+        @apply text-[0.75rem];
+    }
+
+    .slider {
+        @apply overflow-hidden flex h-[22.5rem] lg:h-[33.375rem];
+    }
+
+    .slide {
+        @apply min-w-full transition-transform duration-500 ease-out;
+    }
+
+    .slide__img {
+        @apply object-cover object-center w-full h-full;
+    }
+
+    .slider-control-pos {
+        @apply absolute top-0 right-0 lg:top-full lg:left-0 -translate-y-full;
+    }
+
+    .slider-control-bttn {
+        @apply px-[1.3125rem] lg:px-[2.0625rem] py-4 lg:py-[1.75rem] bg-black hover:bg-gray-darker focus:bg-gray-darker text-white transition-colors duration-500;
+    }
+}
